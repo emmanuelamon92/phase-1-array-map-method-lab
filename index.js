@@ -1,3 +1,8 @@
+//iterate through array
+//iterate through string for words
+//iterate in iteration
+//capitalize first letter
+//foreach vs map
 const tutorials = [
   'what does the this keyword mean?',
   'What is the Constructor OO pattern?',
@@ -11,6 +16,13 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
-}
+const titleCased = tutorials.map(individualPhrase => {
+
+  const individualPhrase = example.split(' ')
+  for (let i in individualPhrase){
+    individualPhrase[i] = individualPhrase[i].charAt(0).toUpperCase() + individualPhrase[i].slice(1)
+  }
+  let newTutorials = individualPhrase.join(' ')
+  return newTutorials;
+  
+})
