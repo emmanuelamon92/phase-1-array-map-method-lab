@@ -36,16 +36,27 @@ const tutorials = [
 //   })
 // }
 
-const titleCased = () => tutorials.map(tutorial => {
+// const titleCased = () => tutorials.map(tutorial => {
 
-  tutorial = tutorial.split(' ')
-  // for (let word in tutorial){
-  //   tutorial[word] = tutorial[word].charAt(0).toUpperCase() + tutorial[word].slice(1)
-  // }
-  const upperWord = tutorial.map(word => {
-    word = word.charAt(0).toUpperCase() + word.slice(1)
-    return word
+//   tutorial = tutorial.split(' ')
+//   for (let word in tutorial){
+//     console.log(word)
+//     tutorial[word] = tutorial[word].charAt(0).toUpperCase() + tutorial[word].slice(1)
+//   }
+//   // const upperWord = tutorial.map(word => {
+//   //   word = word.charAt(0).toUpperCase() + word.slice(1)
+//   //   return word
+//   // })
+//   let newTutorials = tutorial.join(' ') 
+//   return newTutorials;
+//   // return upperWord.join(' ')
+// })
+
+const titleCased = () => tutorials.map(tutorial => {
+  let wordArray = tutorial.split(' ')
+  let titlizedArray = wordArray.map(word => {
+    return word.charAt(0).toUpperCase() + word.slice(1)
   })
-  // let newTutorials = tutorial.join(' ') // return newTutorials;
-  return upperWord.join(' ')
+  return titlizedArray.join(" ")
+
 })
